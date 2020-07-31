@@ -146,11 +146,11 @@ img{
 	background: #EAF0ED;
 }
 
+/*馬卡龍們*/
 .main .product{
 	max-width: 66%;
 }
 
-/*馬卡龍們*/
 .product .allItems{
 	display: flex;
 	flex-wrap: wrap;
@@ -185,7 +185,6 @@ img{
 }
 
 /*品名&價格&加購物車*/
-
 .allItems .intro {
 	display: flex;
 }
@@ -394,9 +393,11 @@ img{
 
 /*RWD*/
 @media(max-width: 975px){
+
 	.container{
 		max-width: 95%;
 	}
+	
 	.main{
 		justify-content: space-around;
 	}
@@ -470,6 +471,7 @@ img{
 }
 
 @media(max-width: 721px){
+
 	.main{
 		margin-top: 0px;
 	}
