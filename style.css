@@ -1,0 +1,520 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*共用區*/
+body{
+	text-align: center;
+	font-family: 微軟正黑體;
+	font-weight: bold;
+}
+
+.container{
+	max-width: 940px;
+	margin: 0 auto;
+}	
+
+img{
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+/*LOGO&導覽列*/
+.header{
+    display: flex;
+	justify-content: space-between;
+    align-items: center;
+	padding: 30px 0 30px 0;
+}
+
+.header .logo .pcUse{
+    height: 40px;
+}
+
+.header .logo .mobileUse{
+	display: none;
+}
+
+.header .navbar{
+    display: flex;
+}
+
+.header .hamburger{
+	display: none;
+}
+
+.navbar .btn a{
+	font-size: 17px;
+	line-height: 22px;
+	padding: 10px 30px 10px 30px;
+	display: block;	
+	text-decoration: none;	
+	color: #3F5D45;
+}
+
+.navbar .btn a:hover, .navbar .cart a:hover{
+	background: #EAF0ED;
+}
+
+.navbar .cart a{
+	display: block;
+	padding: 10px 0 10px 39px;
+}
+
+
+
+/*選單&馬卡龍們*/
+/*左側選單*/
+.main{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin-top: 60px;
+}
+
+.main .menu{
+	font-size: 24px;
+	line-height: 33px;
+	width: 32%;
+}
+
+.main .menu h1{
+	background: #3F5D45;
+	padding: 16px 0 16px 0;
+	color: #EAF0ED;
+}
+
+.menu li{
+	border: 1px solid #EAF0ED;
+}
+
+.menu li a{
+	display: block;	
+	text-decoration: none;	
+	color: #3F5D45;
+	padding: 14px 0px 14px 0px;
+}
+
+.menu li a:hover{
+	background: #EAF0ED;
+}
+
+.main .product{
+	max-width: 66%;
+}
+
+/*馬卡龍們*/
+.product .allItems{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.allItems .listItems{	
+	position: relative;
+}
+
+.listItems .today{	
+	position: absolute;
+    left: 20px;
+    top: 0px;
+	background: #3F5D45;
+	color: #EAF0ED;
+}
+
+/*本日精選*/
+.listItems .today p{
+	writing-mode: vertical-lr;
+	font-size: 17px;	
+	letter-spacing: 2px;
+	padding: 15px 10px 15px 10px;
+}
+
+/*加入最愛*/
+.listItems .like{
+	position: absolute;
+	right: 22px;
+    top: 19px;
+}
+
+/*品名&價格&加購物車*/
+
+.allItems .intro {
+	display: flex;
+}
+
+.allItems .intro .name , .allItems .intro .price{
+	color: #3F5D45;
+	font-size: 20px;
+	line-height: 28px;
+	border: 1px solid #EAF0ED;
+	padding: 14px 33px 14px 33px;
+}
+
+.allItems .intro .price{
+	padding: 14px 24px 14px 24px;
+}
+
+.allItems .listItems .button{
+	font-family: 微軟正黑體;
+	font-weight: bold;
+	font-size: 24px;
+	background: #EAF0ED;
+	border: 0;
+	color: #3F5D45;
+	padding: 16px 90px 16px 90px;
+	margin-bottom: 20px;
+	cursor: pointer;
+}
+
+.allItems .listItems .button:hover{
+	background: #3F5D45;
+	color: #EAF0ED;
+}
+
+/*第幾頁*/
+.pages {
+	display: flex;
+	justify-content: flex-end;
+	margin: 30px 0 60px 0;
+}
+
+.pages li{
+	border: 1px solid #EAF0ED;
+}
+
+.pages .number{
+	font-size: 20px;
+    line-height: 28px;
+}
+
+.pages .number a{	
+	display: block;	
+	text-decoration: none;	
+	color: #3F5D45;
+	padding: 19px 27px 19px 27px;
+}
+
+.pages .number a:hover{
+    background: #3F5D45;
+    color: #EAF0ED;
+}
+
+/*上一頁下一頁*/
+.pages .prew img, .next img{
+	padding: 20px;
+}
+
+.pages .prew a:hover, .next a:hover{
+	background: white;
+}
+
+/*訂閱你我的甜蜜郵件*/
+.footer .subscribeBG{
+	background: #3F5D45;
+}
+
+.subscribe {	
+	margin: 0 auto;
+	max-width: 780px;
+	display: flex;	
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.subscribe .logoDes{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 30px 0 30px 0;
+}
+
+.subscribe .logoDes img{
+	height: 40px;
+	width: 40px;
+}
+
+.subscribe .logoDes h2{
+	font-size: 24px;
+	line-height: 33px;
+	color: #EAF0ED;
+	margin-left: 20px;
+    font-weight: 550;
+}
+
+/*輸入Email的表單*/
+.subscribe .mailForm{
+	position: relative;
+	display: flex;
+	margin: 30px 0 30px 0;
+}
+
+.subscribe .mailForm .mailIcon{
+	width: 24px;
+	height: 24px;
+	position: absolute;
+	top: 16px;
+	left: 20px;
+}
+
+.subscribe .mailForm input{
+	height: 56px;
+	border: 0;
+	width: 232px;
+	padding-left: 64px;
+	padding-right: 20px;
+	background-color: #EAF0ED;
+	font-size: 18px;
+	line-height: 28px;
+}
+
+/*送出按鈕*/
+.subscribe .mailForm .send{
+	border: 0;
+	cursor: pointer;
+	background-color: #FFE180;
+	padding: 0 20px 0 20px;
+}
+
+/*關於我們*/
+.aboutUsBG{
+	margin: 0 auto;
+	background: #EAF0ED;
+}
+
+.aboutUs{
+	margin: 0 auto;
+	max-width: 780px;
+}
+
+/*商店logo+住址+電話*/
+.aboutUs .shopInfo{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 30px;
+}
+
+.aboutUs .shopInfo .logoAddress{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.shopInfo .logoAddress .logoImg{
+	height: 27px;
+	width: 171px;		
+	margin: 38px 0 0 0;
+}
+
+.shopInfo .logoAddress .telAddress{
+	font-size: 16px;
+	line-height: 24px;
+	text-align: left;
+	color: #3F5D45;
+    font-weight: 600;
+}
+
+/*今天是個吃甜點的好日子*/
+.aboutUs .shopInfo .slogan{
+	width: 70px;
+	margin-top: 38px;
+}
+
+/*FB跟LINE*/
+.aboutUs .snsLink{
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	padding-bottom: 30px;
+}
+
+.aboutUs .snsLink .icon{
+	display: flex;
+}
+
+.aboutUs .snsLink .icon img{
+	height: 32px;
+	width: 32px;
+	padding-right: 8px;
+}
+
+.aboutUs .snsLink .copyRight{
+	color: #3F5D45;
+	font-size: 14px;
+	line-height: 19px;
+    font-weight: 600;
+}
+
+/*RWD*/
+@media(max-width: 975px){
+	.container{
+		max-width: 95%;
+	}
+	.main{
+		justify-content: space-around;
+	}
+
+	.main .menu{
+		width: 300px;
+	}
+
+	.main .product{
+		max-width: 330px;
+	}
+	
+	.pages {
+		justify-content: center;
+	}
+
+	.subscribe , .aboutUs {
+		padding: 0 8% 0 8%;
+	}
+	.subscribe .mailForm input{
+		width: 182px;
+	}
+}
+
+@media(max-width: 768px){
+
+	.container{
+		max-width: 100%;
+	}
+	.header .hamburger{
+		display: block;
+	}
+
+	.header .logo .pcUse{
+		display: none;
+	}
+	
+	.header .logo .mobileUse{
+		display: block;
+		width: 150px;
+	}
+
+	.header .navbar .btn{
+		display: none;
+	}
+	
+	.header .navbar .cart{
+		padding: 0;
+	}
+	
+	.main .menu{
+		width: 100%;
+		margin-bottom: 60px;
+	}
+
+	.main .product{
+		max-width: 85%;
+	}
+
+	.pages {
+		justify-content: center;
+	}
+	
+	.subscribe , .aboutUs .shopInfo, .aboutUs .snsLink{
+		justify-content: space-between;
+	}
+
+	.subscribe .logoDes{
+		margin-bottom: 30px;
+	}
+}
+
+@media(max-width: 721px){
+	.main{
+		margin-top: 0px;
+	}
+
+	.main .menu{
+		margin-bottom: 30px;
+	}
+	.main .allItems{
+		justify-content: center;
+	}
+
+	.pages{
+		margin: 15px 0 30px 0;
+	}
+
+	.subscribe {
+		justify-content: center;
+	}
+	.subscribe .mailForm{
+		margin: 0 0 30px 0;
+	}
+}
+
+@media(max-width: 425px){
+
+	.aboutUs .slogan{
+		display: none;
+	}
+
+	.aboutUs{
+		margin-left: 5%;
+	}
+
+	.aboutUs .shopInfo{
+		justify-content: flex-start;
+	}
+
+	.shopInfo .logoAddress .logoImg{
+		margin: 38px 0 40px 0;
+	}
+	.aboutUs .snsLink{
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.aboutUs .snsLink .copyRight{
+		margin-top: 23px;
+	}
+}
