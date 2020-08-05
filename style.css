@@ -71,26 +71,40 @@ img{
     display: flex;
 	justify-content: space-between;
     align-items: center;
-	padding: 30px 0 30px 0;
-}
-
-.header .logo .pcUse{
-    height: 40px;
-}
-
-.header .logo .mobileUse{
-	display: none;
-}
-
-.header .navbar{
-    display: flex;
+	padding: 30px 0 30px 0;	
+	position: relative;
 }
 
 .header .hamburger{
 	display: none;
 }
 
-.navbar .btn a{
+.header .logo a{
+	background-image:url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/logo-all-dark.svg);
+	background-size: 210px 40px;
+	width: 210px;
+	height: 40px;
+	display: block;
+	text-indent: 101%;
+	white-space: nowrap;
+	overflow: hidden;  
+}
+
+.header .navbar{
+    display: flex;
+}
+
+.header .navbar .navbar-nav{
+	display: flex;
+	max-height: 0px;
+}
+
+.header .navbar .active {
+	max-height: 200px;
+	z-index: 5;
+}
+
+.navbar .navbar-nav a{
 	font-size: 17px;
 	line-height: 22px;
 	padding: 10px 30px 10px 30px;
@@ -99,11 +113,11 @@ img{
 	color: #3F5D45;
 }
 
-.navbar .btn a:hover, .navbar .cart a:hover{
+.navbar .navbar-nav a:hover, .navbar .cart:hover{
 	background: #EAF0ED;
 }
 
-.navbar .cart a{
+.navbar .cart{
 	display: block;
 	padding: 10px 0 10px 39px;
 }
@@ -125,7 +139,7 @@ img{
 	width: 32%;
 }
 
-.main .menu h1{
+.main .menu h2{
 	background: #3F5D45;
 	padding: 16px 0 16px 0;
 	color: #EAF0ED;
@@ -417,6 +431,7 @@ img{
 	.subscribe , .aboutUs {
 		padding: 0 8% 0 8%;
 	}
+	
 	.subscribe .mailForm input{
 		width: 182px;
 	}
@@ -427,21 +442,26 @@ img{
 	.container{
 		max-width: 100%;
 	}
+
 	.header .hamburger{
 		display: block;
 	}
 
-	.header .logo .pcUse{
-		display: none;
-	}
-	
-	.header .logo .mobileUse{
-		display: block;
-		width: 150px;
+	.header .logo a{
+		background-image:url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/logotype-sm-dark.svg);
+		background-size: 160px 25px;
+		width: 160px;
+		height: 25px;
 	}
 
-	.header .navbar .btn{
-		display: none;
+	.navbar-nav {
+		position: absolute;
+		left: 0;
+		top: 100%;
+		width: 100%;
+		overflow: hidden;
+		background: white;
+		flex-direction: column;
 	}
 	
 	.header .navbar .cart{
@@ -479,6 +499,7 @@ img{
 	.main .menu{
 		margin-bottom: 30px;
 	}
+
 	.main .allItems{
 		justify-content: center;
 	}
@@ -490,6 +511,7 @@ img{
 	.subscribe {
 		justify-content: center;
 	}
+
 	.subscribe .mailForm{
 		margin: 0 0 30px 0;
 	}
@@ -512,10 +534,12 @@ img{
 	.shopInfo .logoAddress .logoImg{
 		margin: 38px 0 40px 0;
 	}
+
 	.aboutUs .snsLink{
 		flex-direction: column;
 		align-items: flex-start;
 	}
+
 	.aboutUs .snsLink .copyRight{
 		margin-top: 23px;
 	}

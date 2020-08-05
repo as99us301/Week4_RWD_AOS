@@ -15,27 +15,26 @@
         <!--LOGO&導覽列-->
         <div class="header">
             <a class="hamburger" href="#">
-                <img  data-aos="fade-down"src="https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/dehaze-24px.png?raw=true"
+                <img data-aos="fade-down"
+                    src="https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/dehaze-24px.png?raw=true"
                     alt="">
             </a>
 
-            <div class="logo">
-                <img class="pcUse"  data-aos="fade-down"
-                    src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/logo-all-dark.svg"
-                    alt="pcLogo">
-                <img class="mobileUse" data-aos="fade-down"
-                    src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/logotype-sm-dark.svg"
-                    alt="mobileLogo">
+            <h1 class="logo" data-aos="fade-down">
+                <a href="#">Sweetaste*</a>
+            </h1>
+
+            <div class="navbar">
+                <ul class="navbar-nav" data-aos="fade-down">
+                    <li><a href="#">首頁</a></li>
+                    <li><a href="#">甜點</a></li>
+                    <li><a href="#">登入</a></li>
+                </ul>
+                <a class="cart" href="#" data-aos="fade-down"><img
+                        src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/shopping_cart.png"
+                        alt="cart"></a>
             </div>
 
-            <ul class="navbar" data-aos="fade-down">
-                <li class="btn"><a href="#">首頁</a></li>
-                <li class="btn"><a href="#">甜點</a></li>
-                <li class="btn"><a href="#">登入</a></li>
-                <li class="cart"><a href="#"><img
-                            src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/shopping_cart.png"
-                            alt="cart"></a></li>
-            </ul>
         </div>
 
         <!--Banner圖-->
@@ -45,10 +44,9 @@
 
 
         <div class="main">
-
             <!--左側選單-->
             <div class="menu">
-                <h1 data-aos="fade-right">甜點類別</h1>
+                <h2 data-aos="fade-right">甜點類別</h2>
                 <ul>
                     <li data-aos="fade-right"><a href="#">所有甜點（48）</a></li>
                     <li data-aos="fade-right"><a href="#">本日精選（10）</a></li>
@@ -63,7 +61,6 @@
 
                     <!--第1圖-->
                     <li class="listItems" data-aos="zoom-in">
-
                         <!--本日精選&愛心-->
                         <div class="today">
                             <p>本日精選</p>
@@ -84,7 +81,7 @@
                     </li>
 
                     <!--第2圖-->
-                    <li class="listItems" data-aos="zoom-in"> 
+                    <li class="listItems" data-aos="zoom-in">
                         <div class="today">
                             <p>本日精選</p>
                         </div>
@@ -235,7 +232,11 @@
                         <img class="logoImg"
                             src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/logotype-sm-dark.svg"
                             alt="logo">
-                        <p class="telAddress" data-aos="zoom-out-right">07-1234-5678 <br>sweetaste@email.com <br>800 高雄市新興區幸福路 520 號</p>
+                        <ul class="telAddress" data-aos="zoom-out-right">
+                            <li>07-1234-5678</li>
+                            <li>sweetaste@email.com</li>
+                            <li>800 高雄市新興區幸福路 520 號</li>
+                        </ul>
                     </div>
                     <!--今天是個-->
                     <img class="slogan" data-aos="zoom-out"
@@ -264,12 +265,16 @@
         </div>
     </div>
 
-    <!--載入aos-->
+    <!--載入aos&漢堡選單用jQuery-->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
     <script>
         AOS.init({
             duration: 800,
+        });
+        $('.hamburger').click(function () {
+            $('.navbar-nav').toggleClass('active')
         });
     </script>
 </body>
