@@ -51,7 +51,7 @@ table {
 /*共用區*/
 body{
 	text-align: center;
-	font-family: 微軟正黑體;
+	font-family: Microsoft JhengHei;
 	font-weight: bold;
 }
 
@@ -216,7 +216,7 @@ img{
 }
 
 .allItems .listItems .button{
-	font-family: 微軟正黑體;
+	font-family: Microsoft JhengHei;
 	font-weight: bold;
 	font-size: 24px;
 	background: #EAF0ED;
