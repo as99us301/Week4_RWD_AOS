@@ -443,6 +443,10 @@ img{
 		max-width: 100%;
 	}
 
+	.header{
+		padding: 30px;	
+	}
+	
 	.header .hamburger{
 		display: block;
 	}
